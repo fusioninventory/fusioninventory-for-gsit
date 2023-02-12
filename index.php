@@ -6,7 +6,7 @@
  * Copyright (C) 2010-2022 by the FusionInventory Development Team.
  *
  * http://www.fusioninventory.org/
- * https://github.com/fusioninventory/fusioninventory-for-glpi
+ * https://github.com/fusioninventory/fusioninventory-for-gsit
  * http://forge.fusioninventory.org/
  *
  * ------------------------------------------------------------------------
@@ -31,7 +31,7 @@
  * ------------------------------------------------------------------------
  *
  * This file is used to manage the index page of the plugin.
- * It can be use in GLPI or by URL defined in agent to redirect to
+ * It can be use in GSIT or by URL defined in agent to redirect to
  * fron/communication.php page.
  *
  * ------------------------------------------------------------------------
@@ -42,7 +42,7 @@
  * @license   AGPL License 3.0 or (at your option) any later version
  *            http://www.gnu.org/licenses/agpl-3.0-standalone.html
  * @link      http://www.fusioninventory.org/
- * @link      https://github.com/fusioninventory/fusioninventory-for-glpi
+ * @link      https://github.com/fusioninventory/fusioninventory-for-gsit
  *
  */
 

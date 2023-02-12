@@ -6,7 +6,7 @@
  * Copyright (C) 2010-2022 by the FusionInventory Development Team.
  *
  * http://www.fusioninventory.org/
- * https://github.com/fusioninventory/fusioninventory-for-glpi
+ * https://github.com/fusioninventory/fusioninventory-for-gsit
  * http://forge.fusioninventory.org/
  *
  * ------------------------------------------------------------------------
@@ -41,7 +41,7 @@
  * @license   AGPL License 3.0 or (at your option) any later version
  *            http://www.gnu.org/licenses/agpl-3.0-standalone.html
  * @link      http://www.fusioninventory.org/
- * @link      https://github.com/fusioninventory/fusioninventory-for-glpi
+ * @link      https://github.com/fusioninventory/fusioninventory-for-gsit
  *
  */
 
@@ -49,7 +49,7 @@ if (!defined('GLPI_ROOT')) {
    include ("../../../inc/includes.php");
 }
 
-// Manage for networkport display in networkequipment (glpi or fusion view
+// Manage for networkport display in networkequipment (gsit or fusion view
 if (isset($_POST['selectview'])) {
    $_SESSION['plugin_fusioninventory_networkportview'] = $_POST['selectview'];
    Html::back();

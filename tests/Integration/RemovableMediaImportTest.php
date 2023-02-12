@@ -34,7 +34,7 @@ along with FusionInventory. If not, see <http://www.gnu.org/licenses/>.
 @license   AGPL License 3.0 or (at your option) any later version
            http://www.gnu.org/licenses/agpl-3.0-standalone.html
 @link      http://www.fusioninventory.org/
-@link      http://forge.fusioninventory.org/projects/fusioninventory-for-glpi/
+@link      https://github.com/fusioninventory/fusioninventory-for-gsit
 @since     2013
 
 ------------------------------------------------------------------------

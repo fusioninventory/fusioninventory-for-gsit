@@ -6,7 +6,7 @@
  * Copyright (C) 2010-2022 by the FusionInventory Development Team.
  *
  * http://www.fusioninventory.org/
- * https://github.com/fusioninventory/fusioninventory-for-glpi
+ * https://github.com/fusioninventory/fusioninventory-for-gsit
  * http://forge.fusioninventory.org/
  *
  * ------------------------------------------------------------------------
@@ -41,15 +41,15 @@
  * @license   AGPL License 3.0 or (at your option) any later version
  *            http://www.gnu.org/licenses/agpl-3.0-standalone.html
  * @link      http://www.fusioninventory.org/
- * @link      https://github.com/fusioninventory/fusioninventory-for-glpi
+ * @link      https://github.com/fusioninventory/fusioninventory-for-gsit
  *
  */
 
-define ("PLUGIN_FUSIONINVENTORY_VERSION", "9.5+4.2");
-// Minimal GLPI version, inclusive
-define('PLUGIN_FUSIONINVENTORY_GLPI_MIN_VERSION', '9.5');
-// Maximum GLPI version, exclusive
-define('PLUGIN_FUSIONINVENTORY_GLPI_MAX_VERSION', '9.6');
+define ("PLUGIN_FUSIONINVENTORY_VERSION", "9.5+5.0");
+// Minimal GSIT version, inclusive
+define('PLUGIN_FUSIONINVENTORY_GSIT_MIN_VERSION', '9.5.6');
+// Maximum GSIT version, exclusive
+define('PLUGIN_FUSIONINVENTORY_GSIT_MAX_VERSION', '9.6');
 // Used for use config values in 'cache'
 $PF_CONFIG = [];
 // used to know if computer inventory is in reallity a ESX task
@@ -508,11 +508,11 @@ function plugin_version_fusioninventory() {
            'oldname'        => 'tracker',
            'author'         => '<a href="mailto:david@durieux.family">David DURIEUX</a>
                                 & FusionInventory team',
-           'homepage'       => 'https://github.com/fusioninventory/fusioninventory-for-glpi',
+           'homepage'       => 'https://github.com/fusioninventory/fusioninventory-for-gsit',
            'requirements'   => [
               'glpi' => [
-                  'min' => PLUGIN_FUSIONINVENTORY_GLPI_MIN_VERSION,
-                  'max' => PLUGIN_FUSIONINVENTORY_GLPI_MAX_VERSION,
+                  'min' => PLUGIN_FUSIONINVENTORY_GSIT_MIN_VERSION,
+                  'max' => PLUGIN_FUSIONINVENTORY_GSIT_MAX_VERSION,
                   'dev' => PLUGIN_FUSIONINVENTORY_OFFICIAL_RELEASE == 0
                ],
                'php' => [
@@ -539,8 +539,8 @@ function plugin_fusioninventory_check_prerequisites() {
 
    if (!method_exists('Plugin', 'checkVersions')) {
       $version = rtrim(GLPI_VERSION, '-dev');
-      if (version_compare($version, PLUGIN_FUSIONINVENTORY_GLPI_MIN_VERSION, 'lt')) {
-         echo "This plugin requires GLPI " . PLUGIN_FUSIONINVENTORY_GLPI_MIN_VERSION;
+      if (version_compare($version, PLUGIN_FUSIONINVENTORY_GSIT_MIN_VERSION, 'lt')) {
+         echo "This plugin requires GSIT " . PLUGIN_FUSIONINVENTORY_GSIT_MIN_VERSION;
          return false;
       }
 
@@ -548,16 +548,16 @@ function plugin_fusioninventory_check_prerequisites() {
          $_SESSION['glpi_plugins'] = [];
       }
 
-      if (version_compare(GLPI_VERSION, PLUGIN_FUSIONINVENTORY_GLPI_MIN_VERSION.'-dev', '!=')
-         && version_compare(GLPI_VERSION, PLUGIN_FUSIONINVENTORY_GLPI_MIN_VERSION, 'lt')
-         || version_compare(GLPI_VERSION, PLUGIN_FUSIONINVENTORY_GLPI_MAX_VERSION, 'ge')) {
+      if (version_compare(GLPI_VERSION, PLUGIN_FUSIONINVENTORY_GSIT_MIN_VERSION.'-dev', '!=')
+         && version_compare(GLPI_VERSION, PLUGIN_FUSIONINVENTORY_GSIT_MIN_VERSION, 'lt')
+         || version_compare(GLPI_VERSION, PLUGIN_FUSIONINVENTORY_GSIT_MAX_VERSION, 'ge')) {
          if (method_exists('Plugin', 'messageIncompatible')) {
-            echo Plugin::messageIncompatible('core', PLUGIN_FUSIONINVENTORY_GLPI_MIN_VERSION, PLUGIN_FUSIONINVENTORY_GLPI_MAX_VERSION);
+            echo Plugin::messageIncompatible('core', PLUGIN_FUSIONINVENTORY_GSIT_MIN_VERSION, PLUGIN_FUSIONINVENTORY_GSIT_MAX_VERSION);
          } else {
-            // TRANS: %1$s is the minimum GLPI version inclusive, %2$s the maximum version exclusive
-            echo sprintf(__('Your GLPI version not compatible, require >= %1$s and < %2$s', 'fusioninventory'),
-            PLUGIN_FUSIONINVENTORY_GLPI_MIN_VERSION,
-            PLUGIN_FUSIONINVENTORY_GLPI_MAX_VERSION);
+            // TRANS: %1$s is the minimum GSIT version inclusive, %2$s the maximum version exclusive
+            echo sprintf(__('Your GSIT version not compatible, require >= %1$s and < %2$s', 'fusioninventory'),
+            PLUGIN_FUSIONINVENTORY_GSIT_MIN_VERSION,
+            PLUGIN_FUSIONINVENTORY_GSIT_MAX_VERSION);
          }
          return false;
       }
@@ -571,7 +571,7 @@ function plugin_fusioninventory_check_prerequisites() {
    $a_plugins = ['fusinvinventory', 'fusinvsnmp', 'fusinvdeploy'];
    foreach ($a_plugins as $pluginname) {
       if (file_exists(GLPI_ROOT.'/plugins/'.$pluginname)) {
-         printf(__('Please remove folder %s in glpi/plugins/', 'fusioninventory'), $pluginname);
+         printf(__('Please remove folder %s in gsit/plugins/', 'fusioninventory'), $pluginname);
          return false;
       }
    }
@@ -603,7 +603,7 @@ function plugin_fusioninventory_haveTypeRight($type, $right) {
 
 
 /**
- * Add the FusionInventory footer in GLPI interface
+ * Add the FusionInventory footer in GSIT interface
  *
  * @param string $baseroot
  */
