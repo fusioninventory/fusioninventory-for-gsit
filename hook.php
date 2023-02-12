@@ -6,7 +6,7 @@
  * Copyright (C) 2010-2022 by the FusionInventory Development Team.
  *
  * http://www.fusioninventory.org/
- * https://github.com/fusioninventory/fusioninventory-for-glpi
+ * https://github.com/fusioninventory/fusioninventory-for-gsit
  * http://forge.fusioninventory.org/
  *
  * ------------------------------------------------------------------------
@@ -40,12 +40,12 @@
  * @license   AGPL License 3.0 or (at your option) any later version
  *            http://www.gnu.org/licenses/agpl-3.0-standalone.html
  * @link      http://www.fusioninventory.org/
- * @link      https://github.com/fusioninventory/fusioninventory-for-glpi
+ * @link      https://github.com/fusioninventory/fusioninventory-for-gsit
  *
  */
 
 /**
- * Add search options for GLPI objects
+ * Add search options for GSIT objects
  *
  * @param string $itemtype
  * @return array

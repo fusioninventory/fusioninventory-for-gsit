@@ -1,9 +1,9 @@
-## Fusioninventory Plugin
-[![Build Status](https://travis-ci.org/fusioninventory/fusioninventory-for-glpi.svg?branch=master)](https://travis-ci.org/fusioninventory/fusioninventory-for-glpi)
-[![Coverage Status](https://coveralls.io/repos/fusioninventory/fusioninventory-for-glpi/badge.svg)](https://coveralls.io/r/fusioninventory/fusioninventory-for-glpi)
-(![GitHub downloads](https://img.shields.io/github/downloads/fusioninventory/fusioninventory-for-glpi/total.svg) + ![Redmine downloads](https://img.shields.io/badge/downloads%20redmine-218k%20total-brightgreen.svg))
+## Fusioninventory Plugin for GSIT
+[![Build Status](https://github.com/fusioninventory/fusioninventory-for-gsit/actions/workflows/tests.yml/badge.svg)](https://github.com/fusioninventory/fusioninventory-for-glpi/actions)
+[![Coverage Status](https://coveralls.io/repos/fusioninventory/fusioninventory-for-gsit/badge.svg)](https://coveralls.io/r/fusioninventory/fusioninventory-for-gsit)
+(![GitHub downloads](https://img.shields.io/github/downloads/fusioninventory/fusioninventory-for-gsit/total.svg))
 
-This plugin makes GLPI to process various types of tasks for Fusioninventory agents:
+This plugin makes GSIT to process various types of tasks for Fusioninventory agents:
 * Computer inventory
 * Network discovery
 * Network (SNMP) inventory
@@ -36,4 +36,4 @@ Some icons used in the project comes from the following set of graphics licensed
 
 * [Official website](http://fusioninventory.org/)
 * [Translations on transifex service](https://www.transifex.com/ddurieux/FusionInventory/content/)
-* [Issues](https://github.com/fusioninventory/fusioninventory-for-glpi)
+* [Issues](https://github.com/fusioninventory/fusioninventory-for-gsit)
